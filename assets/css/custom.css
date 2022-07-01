@@ -1,0 +1,23 @@
+/* Custom file css */
+
+.post, .page{
+    margin: 0;
+}
+.wrap_blog_text .post-categories{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap_blog_text .post-categories li{
+    margin-right: 10px;
+}
+.wrap_blog_text .post-categories li:last-of-type{margin-right: 0;}
+.wrap_blog_text .post-categories li a{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #CE5149;
+    text-transform: uppercase;
+}
