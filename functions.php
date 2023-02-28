@@ -1,196 +1,259 @@
 <?php
-/**
- * proposal functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package proposal
- */
+//Bustomizer_Loader::list_hooked_functions();
+// Page with the main features of the site
+const SETTING_PAGE = 17;
 
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+if(!is_plugin_active('bustomizer/bustomizer.php')){
+    add_action('proposal_init', function (){
+    ?>
+        <div class="error" style="
+            color: white;
+            margin: 20px auto;
+            background: darkred;
+            text-align: center;
+            padding: 30px">
+            <h1>Pls Install & Activate Bustomizer Plugin</h1>
+        </div>
+
+    <?php
+    });
+
+
+
 }
 
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function prop_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on proposal, use a find and replace
-		* to change 'prop' to the name of your theme in all the template files.
-		*/
-	load_theme_textdomain( 'prop', get_template_directory() . '/languages' );
+if(class_exists('Bustomizer_Woocommerce')){
+    // отключение оплаты на сайте
+    // Bustomizer_Woocommerce::cart_needs_payment_off();
+    // отключены ненужные метоты оплаты в админке
+    add_action( 'init', function (){
+        add_filter( 'woocommerce_payment_gateways', ['Bustomizer_Woocommerce', 'remove_default_gateways'] );
+    }, 1 );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+    //TODO: Убрать в продакшене
+//    add_action('proposal_init', function (){
+//       echo  '<h1 style="text-align: center">Bustomizer Active</h1>';
+//    });
 
-	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
-	add_theme_support( 'title-tag' );
-
-	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-	add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'main-menu' => esc_html__( 'Primary', 'prop' ),
-			'footer-menu' => esc_html__( 'Footer', 'prop' ),
-		)
-	);
-
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'style',
-			'script',
-		)
-	);
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'prop_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
-
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
+    // Показывает задействованные хуки
+    //add_action('proposal_init', ['Bustomizer_Loader', 'list_hooked_functions'], 0);
 }
-add_action( 'after_setup_theme', 'prop_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function prop_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'prop_content_width', 640 );
+
+// Main Menu
+register_nav_menus(array(
+    'top'=>'Header menu',
+    'bottom'=>'Footer menu',
+));
+
+
+// Отключить перегенерацию миниатюр
+add_filter( 'woocommerce_background_image_regeneration', '__return_false' );
+add_filter( 'woocommerce_resize_images', '__return_false' );
+
+
+//TODO: найти событие после Ajax
+
+// is_cart() is_checkout()
+BustomizerShipping::disable_shipping();
+BustomizerCheckOut::print_order_review_heading();
+
+
+
+//remove_action('woocommerce_checkout_order_review', ['WC_Stripe_Field_Manager', 'output_checkout_fields'], 10);
+
+/*
+ *      WC_Product_Addons_Cart_Ajax
+		add_action( 'wp_ajax_wc_product_addons_calculate_tax', array( $this, 'calculate_tax' ) );
+		add_action( 'wp_ajax_nopriv_wc_product_addons_calculate_tax', array( $this, 'calculate_tax' ) );
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################################
+// Вывод постов в каталоге
+add_action('init', 'redesign_catalog_post');
+if ( ! function_exists( 'redesign_catalog_post' ) ) {
+    function redesign_catalog_post()
+    {
+        remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+        add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+    }
 }
-add_action( 'after_setup_theme', 'prop_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function prop_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'prop' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'prop' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
+    function woocommerce_template_loop_product_thumbnail() {
+        echo woocommerce_get_product_thumbnail();
+    }
 }
-add_action( 'widgets_init', 'prop_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function prop_scripts() {
-	wp_enqueue_style( 'prop-style', get_stylesheet_uri(), get_stylesheet_uri() );
-	wp_style_add_data( 'prop-style', 'rtl', 'replace' );
+if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
+    //function woocommerce_get_product_thumbnail( $size = 'shop_catalog' ) {
+    function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail' ): string
+    {
+        global $post, $woocommerce;
+        $output = '';
 
-	wp_enqueue_style( 'prop-main-css', get_template_directory_uri() . '/assets/css/main.css' );
-	wp_enqueue_style( 'prop-media-css', get_template_directory_uri() . '/assets/css/media.css' );
-	wp_enqueue_style( 'prop-custom-css', get_template_directory_uri() . '/assets/css/custom.css' );
-
-
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js');
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script('prop-slick-js', get_template_directory_uri() . '/assets/js/slick.min.js');
-	wp_enqueue_script('prop-main-js', get_template_directory_uri() . '/assets/js/main.js');
-
-	wp_enqueue_script( 'prop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+        if ( has_post_thumbnail() ) {
+            $output .= get_the_post_thumbnail( $post->ID, $size );
+        } else {
+            $output .= wc_placeholder_img( $size );
+            // Or alternatively setting yours width and height shop_catalog dimensions.
+            // $output .= '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />';
+        }
+        $output .= '';
+        return $output;
+    }
 }
-add_action( 'wp_enqueue_scripts', 'prop_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+
+
 
 /**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
 /**
- * Functions which enhance the theme by hooking into WordPress.
+ * Custom Shortcodes for this theme.
  */
-require get_template_directory() . '/inc/template-functions.php';
-
+require get_template_directory() . '/inc/shortcodes.php';
 /**
- * Customizer additions.
+ * Custom ACF Field for this theme.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/acf_custom_field.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+
+
+///--------------------------- create Tile settings ---------------------
+
+
+
+
+
+add_action( 'admin_menu', 'true_top_menu_page', 25 );
+ 
+function true_top_menu_page(){
+ 
+	add_submenu_page(
+		'options-general.php',
+		'Tiles settings', // тайтл страницы
+		'Tiles', // текст ссылки в меню
+		'manage_options', // права пользователя, необходимые для доступа к странице
+		'true_slider', // ярлык страницы
+		'true_slider_page_callback' // функция, которая выводит содержимое страницы
+	);
+}
+ 
+function true_slider_page_callback(){
+ 
+	echo '
+	<style>
+	.propos-class th { 
+  width: 400px;}
+	</style>
+	<div class="wrap">
+	<h1>' . get_admin_page_title() . '</h1>
+	<form method="post" action="options.php">';
+ 
+		settings_fields( 'true_slider_settings' ); // название настроек
+		do_settings_sections( 'true_slider' ); // ярлык страницы, не более
+		submit_button(); // функция для вывода кнопки сохранения
+ 
+	echo '</form></div>';
+ 
 }
 
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+add_action( 'admin_init',  'true_slider_fields' );
+ 
+function true_slider_fields(){
+ 
+
+ 
+	// добавляем секцию без заголовка
+	add_settings_section(
+		'slider_settings_section_id', // ID секции, пригодится ниже
+		'', // заголовок (не обязательно)
+		'', // функция для вывода HTML секции (необязательно)
+		'true_slider' // ярлык страницы
+	);
+ 
+	
+	
+$get_categories_product = get_terms('product_cat', [
+		'orderby' => 'name', // Поле для сортировки
+		'order' => 'ASC', // Направление сортировки
+		'hide_empty' => 1, // Скрывать пустые (1 - да, 0 - нет)
+	]);
+		
+	if(count($get_categories_product) > 0) {
+			
+		foreach($get_categories_product as $categories_item) {
+	
+		// регистрируем опцию
+	register_setting(
+		'true_slider_settings', // название настроек из предыдущего шага
+		'number_of_slider_slides_'.$categories_item->slug, // ярлык опции
+		'absint' // функция очистки
+	);		
+			
+	
+	// добавление поля
+	add_settings_field(
+		'number_of_slider_slides_'.$categories_item->slug,
+		'Количество слайдов в блоке '.$categories_item->name.'<br>(MAX: '.$categories_item->count.')',
+		'true_number_field', // название функции для вывода
+		'true_slider', // ярлык страницы
+		'slider_settings_section_id', // // ID секции, куда добавляем опцию
+		array( 
+			'label_for' => 'number_of_slider_slides_'.$categories_item->slug,
+			'class' => 'propos-class', // для элемента <tr>
+			'name' => 'number_of_slider_slides_'.$categories_item->slug, // любые доп параметры в колбэк функцию
+		)
+	);
+	
+
+		}
+		
+	}
+	
+	
+	
+	
+ 
 }
+ 
+function true_number_field( $args ){
+	// получаем значение из базы данных
+	$value = get_option( $args[ 'name' ] );
+ 
+	printf(
+		'<input type="number"  min="1" id="%s" name="%s" value="%d" />',
+		esc_attr( $args[ 'name' ] ),
+		esc_attr( $args[ 'name' ] ),
+		absint( $value )
+	);
+ 
+}
+
+
+
+
