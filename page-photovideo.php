@@ -44,7 +44,10 @@ get_template_part('parts/top', 'navigation');
 
 <?php get_template_part('parts/section', 'pvideo'); ?>
 
-
+<?php get_template_part('parts/section', 'ptext14'); ?>
+<?php get_template_part('parts/section', 'ptext15'); ?>
+<?php get_template_part('parts/section', 'ptext16'); ?>
+<?php get_template_part('parts/section', 'faq'); ?>
 <?php get_template_part('parts/section', 'blog', ['header'=>'Proposal blog', /*'params'=>['include'=>[10133, 10112, 10034, 9952]]*/]); ?>
 
 

@@ -34,7 +34,7 @@ get_template_part('parts/top', 'navigation');
 
 <?php get_template_part('parts/section', 'ptext10'); ?>
 <?php get_template_part('parts/section', 'ptext11'); ?>
-
+<?php get_template_part('parts/section', 'ptext12'); ?>
 <?php get_template_part('parts/section', 'faq'); ?>
 
 
