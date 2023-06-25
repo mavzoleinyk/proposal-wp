@@ -32,6 +32,11 @@ get_template_part('parts/top', 'navigation');
 
 <?php get_template_part('parts/section', 'pvideo'); ?>
 
+<?php get_template_part('parts/section', 'ptext10'); ?>
+<?php get_template_part('parts/section', 'ptext11'); ?>
+
+<?php get_template_part('parts/section', 'faq'); ?>
+
 
 <?php
 //    /* Start the Loop */

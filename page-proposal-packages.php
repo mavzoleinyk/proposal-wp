@@ -87,8 +87,12 @@ $category_block_4 = get_field('category_block_4')?? '';
 
 <?php get_template_part('parts/section', 'premium-lini', ); ?>
 
-
-
+<?php get_template_part('parts/section', 'ptext5'); ?>
+<?php get_template_part('parts/section', 'ptext6'); ?>
+<?php get_template_part('parts/section', 'ptext7'); ?>
+<?php get_template_part('parts/section', 'ptext8'); ?>
+<?php get_template_part('parts/section', 'ptext9'); ?>
+<?php get_template_part('parts/section', 'faq'); ?>
 <?php get_template_part('parts/section', 'blog', ['header'=>'Proposal blog', 'params'=>['include'=>[10133, 10112, 10034, 9952]]]); ?>
 
 
