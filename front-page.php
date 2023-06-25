@@ -23,6 +23,11 @@
 <?php get_template_part('parts/section', 'nyc', ['num'=>1]); ?>
 <?php get_template_part('parts/section', 'mpnyc'); ?>
 <?php get_template_part('parts/section', 'pvideo'); ?>
+<?php get_template_part('parts/section', 'ptext1'); ?>
+<?php get_template_part('parts/section', 'ptext2'); ?>
+<?php get_template_part('parts/section', 'ptext3'); ?>
+<?php get_template_part('parts/section', 'ptext4'); ?>
+<?php get_template_part('parts/section', 'faq'); ?>
 <?php get_template_part('parts/section', 'blog', ['header'=>'Proposal blog']); ?>
 
 <?php get_footer(); ?>

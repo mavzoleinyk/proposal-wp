@@ -1,4 +1,7 @@
 @media (max-width: 992px) {
+  .main-header-mob{display: block;}
+  .main-header-pc{display: none;}
+  
   .top-header .wrap_covid_info {
     padding: 10px 5px;
   }

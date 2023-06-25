@@ -1,6 +1,6 @@
 <!-- content-post.php -->
 <div class="row">
-    <div class="col-md-9 col-blog-details">
+    <div class="col-md-8 col-blog-details">
 
 
         <article  id="post-<?php the_ID(); ?>" <?php post_class(); ?> >

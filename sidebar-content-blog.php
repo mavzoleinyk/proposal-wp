@@ -16,7 +16,7 @@ $posts = get_posts( $args );
 
 ?>
 
-<div class="col-md-3 col-sidebar">
+<div class="col-md-3 offset-md-1 col-sidebar">
     <div class="sidebar">
 
 
