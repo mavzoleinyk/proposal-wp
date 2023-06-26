@@ -1,5 +1,5 @@
 <!-- section-ptext5.php -->
-<section class="section-ptext5">
+<section class="section-ptext5 ptb-80">
     <div class="container">
         <div class="row">
             <div class="col-12">

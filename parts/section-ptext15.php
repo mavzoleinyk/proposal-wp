@@ -1,8 +1,8 @@
 <!-- section-ptext15.php -->
-<section class="section-ptext15">
+<section class="section-ptext15 ptb-80">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="title">How Much Does a Proposal Photographer Cost?</div>
                 <div class="subtitle">Discover Our Affordable Proposal Photography Services</div>
                 <p>When planning a surprise proposal, capturing the magical moment with a professional photographer is a valuable investment. At Proposal 007, we offer exceptional photography services at competitive prices, along with assistance in finding the perfect proposal location.</p>
@@ -12,9 +12,9 @@
                 <p>If you're interested in more than just photography and would like to include decorations or a private rooftop for your proposal, be sure to check our additional services page.</p>
                 <p>Proposal 007 takes pride in providing exceptional proposal photography and videography services at affordable prices. Contact us today to discuss your proposal plans and let us help you create a memorable experience that will be cherished for a lifetime.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/" alt="">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ptext15-1.jpg" alt="">
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
 <!-- section-ptext2.php -->
-<section class="section-ptext2">
+<section class="section-ptext2 ptb-80">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="bgcontent">
+                <div class="content">
                     <div class="title">Where to propose in New York City?</div>
                     <p>New York City, known for its captivating atmosphere and stunning skylines, is a perfect destination for marriage proposals. Allow us to guide you through some of the most romantic spots in NYC and help you plan the ideal proposal. Top of the rock</p>
                     <ul>

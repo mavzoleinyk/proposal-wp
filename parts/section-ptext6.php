@@ -1,8 +1,10 @@
 <!-- section-ptext6.php -->
-<section class="section-ptext6">
+<section class="section-ptext6 ptb-80">
     <div class="container">
         <div class="row">
-            <div class="col-12">Where is the best place to propose in NYC?</div>
+            <div class="col-12">
+                <div class="title">Where is the best place to propose in NYC?</div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-4">

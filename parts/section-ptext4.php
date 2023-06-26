@@ -1,5 +1,5 @@
 <!-- section-ptext4.php -->
-<section class="section-ptext4">
+<section class="section-ptext4 ptb-80">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -14002,18 +14002,116 @@ button[aria-label="Google Pay"]{
 .product-addon-totals .price .amount{
   font-size: 28px;
 }
+/* Padding */
+.ptb-80{
+  padding: 80px 0;
+}
+/* ptext1 */
+.section-ptext1 .content{
+  display: flex;
+}
+.section-ptext1 .content .title{
+  flex: 1 30%;
+  font-size: 40px;
+  font-weight: 600;
+  color: #0D0D0D;
+  line-height: 1;
+}
+.section-ptext1 .content .info{
+  flex: 1 70%;
+  column-count: 2;
+}
+/* ptext2 */
+.section-ptext2 .content{
+  background-image: url(../images/bgs1.jpg);
+  padding: 60px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.section-ptext2 .content::after{
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.section-ptext2 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+.section-ptext2 .content p{
+  max-width: 350px;
+}
+.section-ptext2 .content ul{
+  margin-bottom: 0;
+}
+/* ptext3 */
+.section-ptext3 .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section-ptext3 .content{
+  column-count: 3;
+}
+/* ptext4 */
+.section-ptext4 .title{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-ptext4 .subtitle{
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+.section-ptext4 .ptext-image{
+  display: grid; 
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.section-ptext4 .content{
+  column-count: 2;
+}
+.section-ptext4 .content p span{
+  font-weight: 600;
+}
+/* Section FAQ */
+.section-faq .content{
+  display: flex;
+}
+.section-faq .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  flex: 1 25%;
+}
+.faq-toggle{
+  flex: 1 75%;
+}
 /* Accordion section */
 .accordion {
-  background-color: #eee;
-  color: #444;
+  color: #000;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 19px;
+  text-transform: uppercase;
   transition: 0.4s;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
 }
 
 .accordion::after {
@@ -14029,7 +14127,7 @@ button[aria-label="Google Pay"]{
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: transparent;
 }
 
 .panel {
@@ -14038,4 +14136,210 @@ button[aria-label="Google Pay"]{
   background-color: white;
   overflow: hidden;
 }
+.panel p{
+  padding: 15px 0;
+  margin-bottom: 0;
+}
 /* Accordion section / */
+
+.section-ptext5 .content{
+  background-image: url(../images/bgs2.jpg);
+  position: relative;
+  color: #fff;
+  padding: 30px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.section-ptext5 .content::after{
+  content: '';
+
+}
+.section-ptext5 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  max-width: 700px;
+}
+.section-ptext5 .content p{
+  max-width: 700px;
+  margin-bottom: 0;
+}
+/* ptext6 */
+.section-ptext6 .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section-ptext6 .subtitle{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.section-ptext6 .image{
+  margin-bottom: 40px;
+}
+/* ptext7 */
+.section-ptext7 .content{
+  background: #f6f6f6;
+  padding: 55px 100px 65px;
+}
+.section-ptext7 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.section-ptext7 .content .info{
+  column-count: 2;
+}
+.section-ptext7 .content-bottom{
+  background-color: #e6e6e6;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.section-ptext8 .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.section-ptext8 .image img{
+  width: 100%;
+}
+/* ptext9 */
+.section-ptext9 .content{
+  display: flex;
+}
+.section-ptext9 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  flex: 1 25%;
+}
+.section-ptext9 .content p{
+  margin-bottom: 0;
+  line-height: 1.8;
+  flex: 1 75%;
+}
+/* ptext10 */
+.section-ptext10 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ptext11 */
+.section-ptext11 .content{
+  background-color: #f6f6f6;
+  padding: 60px 60px 50px;
+  display: flex;
+}
+.section-ptext11 .content .title{
+  flex: 1 25%;
+  font-size: 40px;
+  font-weight: 600;
+}
+.section-ptext11 .content .info{
+  flex: 1 75%;
+  column-count: 2;
+}
+.section-ptext11 .content .info p{
+  margin-bottom: 3rem;
+}
+.section-ptext11 .content .info p span{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+/* ptext12 */
+.section-ptext12 .content{
+  text-align: center;
+}
+.section-ptext12 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.section-ptext12 .content p{
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* ptext14 */
+.section-ptext14 .title{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.section-ptext14 .subtitle{
+  max-width: 600px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+.section-ptext14 p{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section-ptext14 p span{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.section-ptext14 .image{
+  margin-bottom: 40px;
+}
+.section-ptext14-bottom{
+  background-color: #f6f6f6;
+  padding: 60px;
+  text-align: center;
+}
+/* ptext15 */
+.section-ptext15 .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  max-width: 600px;
+}
+.section-ptext15 .subtitle{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.section-ptext15 p{
+  margin-bottom: 15px;
+}
+.section-ptext15 p span{
+  font-weight: 600;
+}
+/* ptext16 */
+.section-ptext16 .content{
+  text-align: center;
+}
+.section-ptext16 .content .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.section-ptext16 .content p{
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
