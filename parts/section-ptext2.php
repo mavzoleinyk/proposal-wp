@@ -15,6 +15,7 @@
                         <li>Heart Arch Rooftop Proposal</li>
                         <li>Brooklyn Botanical Garden</li>
                         <li>Pier 57</li>
+                        <li>Top of the rock</li>
                     </ul>
                 </div>
             </div>

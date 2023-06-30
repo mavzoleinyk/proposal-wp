@@ -272,6 +272,12 @@
   }
 }
 @media (max-width: 767px) {
+  .section-ptext4{
+    display: none;
+  }
+  .section-ptext6 .title{
+    text-align: center;
+  }
   .section-ptext7 .content{
     padding: 30px;
   }
@@ -297,6 +303,9 @@
     text-align: center;
   }
   .section-ptext15 .image{
+    display: none;
+  }
+  .section-ptext16{
     display: none;
   }
   .container-md, .container-sm, .container {
