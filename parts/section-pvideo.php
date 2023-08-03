@@ -24,7 +24,7 @@ $slider = get_field('pvideo_section_repeater')?? get_field('pvideo_section_repea
 <!--                            </a>-->
                             <div class="video_text">
                                 <span><?php echo $slide['tiny_header']?></span>
-                                <h2><?php echo $slide['header']?></h2>
+                                <p class="title"><?php echo $slide['header']?></p>
                             </div>
                         </div>
                     </div>

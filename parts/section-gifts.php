@@ -35,7 +35,7 @@ if($loop->have_posts()):
                         <div class="gift">
                             <a href="<?php echo get_permalink(); ?>">
                                 <?php  echo woocommerce_get_product_thumbnail($size)?>
-                                <h2><?php echo get_the_title(); ?></h2>
+                                <p class="title"><?php echo get_the_title(); ?></p>
 
                             </a>
                         </div>

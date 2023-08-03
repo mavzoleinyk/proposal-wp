@@ -858,7 +858,7 @@
     justify-content: space-evenly;
   }
 
-  .gift h2, .gift .h2 {
+  .gift .title, .gift .h2 {
     width: 40%;
   }
 

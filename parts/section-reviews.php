@@ -40,7 +40,7 @@ $size = 'thumbnail';
                             <div class="review_content">
                                 <?= $review['text'] ?>
                                 <div class="review_name">
-                                    <h4><?= $review['name'] ?></h4>
+                                    <p class="name"><?= $review['name'] ?></p>
                                     <p><?= $review['vacancy'] ?></p>
                                 </div>
                             </div>

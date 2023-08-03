@@ -24,7 +24,7 @@ $size = 'full';
             <?php foreach ($our_team['section_team_text_thumbs'] as $text_thumb):?>
             <div class="col-md-3 col-12">
                 <div class="wrap_team_f">
-                    <h3><?= $text_thumb['text_thumb_header']?></h3>
+                    <div class="title"><?= $text_thumb['text_thumb_header']?></div>
                     <p><?= $text_thumb['text_thumb_content']?></p>
                 </div>
             </div>

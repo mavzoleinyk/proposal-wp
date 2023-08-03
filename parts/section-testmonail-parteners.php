@@ -42,7 +42,7 @@ $testmonails = !$args['testmonails']? false : $testmonails;
                             <div class="row row_t justify-content-center">
                                 <div class="col-lg-7 col-md-10 col-10">
                                     <div class="wrap_testmonail">
-                                        <h4><?php echo $testmonail['testmonail']['testmonail']?></h4>
+                                        <p><?php echo $testmonail['testmonail']['testmonail']?></p>
                                         <span class="testmonail-name">
                                         <?php echo $testmonail['testmonail']['testmonail_name']?>
                                         </span>

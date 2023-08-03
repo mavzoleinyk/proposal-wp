@@ -254,6 +254,9 @@ function true_number_field( $args ){
  
 }
 
-
+// Обновление года
+function update_year() {
+    return date('Y');
+}
 
 

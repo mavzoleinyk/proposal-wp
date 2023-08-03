@@ -22,7 +22,7 @@ $section_how_repeater = get_field('section_how_repeater')?? get_field('section_h
                     <div class="pro_icon">
                         <?= $how_thumb['ico'] ?>
                     </div>
-                    <h4><?= $how_thumb['header'] ?></h4>
+                    <p class="title"><?= $how_thumb['header'] ?></p>
                     <?= $how_thumb['text'] ?>
                 </div>
             </div>

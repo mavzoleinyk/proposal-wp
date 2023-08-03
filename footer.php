@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="wrap_footer_contact">
-                        <h5>Contact Form:</h5>
+                        <div class="title">Contact Form:</div>
                         <?php echo do_shortcode( '[contact-form-7 id="15" title="Footer Form"]' );?>
                     </div>
                 </div>
@@ -95,8 +95,7 @@
                 <div class="col-md-4">
                     <div class="wrap_footer_copywrite">
                         <?php get_template_part('parts/block', 'social'); ?>
-                        <p>All rights reserved © 2022 Proposal 007 </p>
-
+                        <p>All rights reserved © <?php echo update_year();?> Proposal 007 </p>
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@ $posts = get_posts($param);
                                         }
                                     ?>
 <!--                                    <a href="#" class="cat-blog">Proposal photo</a>-->
-                                    <h2><a href="<?php the_permalink(); ?>"><?php  the_title()?></a></h2>
+                                    <div class="title"><a href="<?php the_permalink(); ?>"><?php  the_title()?></a></div>
                                 </div>
                             </div>
                         </div>

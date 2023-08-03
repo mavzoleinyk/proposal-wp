@@ -30,7 +30,7 @@ $size = 'large_thumb';
                     <a href="<?php echo $images_block[0]['link']?>">
                         <?php echo wp_get_attachment_image($images_block[0]['image']['ID'], 'full' ); ?>
 
-                        <h3><?php echo $images_block[0]['header'] ?></h3>
+                        <div class="title"><?php echo $images_block[0]['header'] ?></div>
                     </a>
                 </div>
             </div>

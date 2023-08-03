@@ -40,7 +40,7 @@ if($num == 1){
                         <a href="<?php echo $item['link']['url']?? '' ?>">
                             <?php echo wp_get_attachment_image( $item['image']['id']?? '', $size )?>
                             <div class="nycp_text">
-                                <h2><?php echo $item['image']['caption']?? '' ?></h2>
+                                <p class="title"><?php echo $item['image']['caption']?? '' ?></p>
                             </div>
                         </a>
                     </div>

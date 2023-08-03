@@ -11,8 +11,8 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                <p><span>Secret Engagement Photographer</span>
-                    Our talented and passionate secret engagement photographers in NYC are experts at capturing the very heart of your love story. They work discreetly, remaining hidden until the perfect moment arrives, ensuring your partner remains blissfully unaware of their presence until you're down on one knee. This element of surprise allows for the most authentic and heartfelt reactions to be captured. The stunning images they create will serve as an enduring testament to the beginning of your lifelong journey together. With their exceptional skills, your surprise proposal will be forever etched in time, allowing you and your partner to relive the romance and excitement for years to come.</p>
+                <h1>Secret Engagement Photographer</h1>
+                <p>Our talented and passionate secret engagement photographers in NYC are experts at capturing the very heart of your love story. They work discreetly, remaining hidden until the perfect moment arrives, ensuring your partner remains blissfully unaware of their presence until you're down on one knee. This element of surprise allows for the most authentic and heartfelt reactions to be captured. The stunning images they create will serve as an enduring testament to the beginning of your lifelong journey together. With their exceptional skills, your surprise proposal will be forever etched in time, allowing you and your partner to relive the romance and excitement for years to come.</p>
             </div>
             <div class="col-md-9">
                 <div class="image">

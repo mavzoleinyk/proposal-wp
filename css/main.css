@@ -11354,7 +11354,7 @@ img, svg {
   display: inline-block;
 }
 
-.wrap_testmonail h4, .wrap_testmonail .h4 {
+.wrap_testmonail p, .wrap_testmonail p {
   font-weight: 300;
   font-size: 28px;
   line-height: 140%;
@@ -11433,7 +11433,7 @@ span.testmonail_arrow.prevta {
 .wrap_package img {
   width: 100%;
 }
-.wrap_package h3, .wrap_package .h3 {
+.wrap_package .title, .wrap_package .h3 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -11540,7 +11540,7 @@ span.testmonail_arrow.prevta {
   display: block;
   padding-top: 0;
 }
-.gift h2, .gift .h2 {
+.gift .title, .gift .h2 {
   font-weight: 300;
   font-size: 16px;
   line-height: 140%;
@@ -11587,7 +11587,7 @@ ul.slick-dots li.slick-active button {
 .wrap_team_f {
   padding: 15px 0;
 }
-.wrap_team_f h3, .wrap_team_f .h3 {
+.wrap_team_f .title, .wrap_team_f .h3 {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -11640,7 +11640,7 @@ ul.slick-dots li.slick-active button {
 .review_content .review_name {
   padding-top: 20px;
 }
-.review_content .review_name h4, .review_content .review_name .h4 {
+.review_content .review_name p.name, .review_content .review_name .h4 {
   font-size: 16px;
   line-height: 140%;
   color: #0D0D0D;
@@ -11661,12 +11661,13 @@ ul.slick-dots li.slick-active button {
 .wrap_col_property {
   text-align: center;
 }
-.wrap_col_property h4, .wrap_col_property .h4 {
+.wrap_col_property .title, .wrap_col_property .h4 {
   padding: 15px 0;
   font-weight: 300;
   font-size: 18px;
   line-height: 140%;
   color: #0E0E0E;
+  text-align: center;
 }
 .wrap_col_property p {
   font-weight: 200;
@@ -11691,7 +11692,7 @@ ul.slick-dots li.slick-active button {
 .nycproposal .nycp_text {
   padding: 15px;
 }
-.nycproposal .nycp_text h2, .nycproposal .nycp_text .h2 {
+.nycproposal .nycp_text .title, .nycproposal .nycp_text .h2 {
   font-weight: 500;
   font-size: 18px;
   line-height: 140%;
@@ -11751,7 +11752,7 @@ ul.slick-dots li.slick-active button {
   right: 0;
   bottom: 0;
 }
-.wrap_video_item .video_text h2, .wrap_video_item .video_text .h2 {
+.wrap_video_item .video_text .title, .wrap_video_item .video_text .h2 {
   width: 40%;
   padding: 60px;
   color: #fff;
@@ -11817,14 +11818,14 @@ ul.slick-dots li.slick-active button {
 .wrap_blog_item .wrap_blog_text a {
   text-decoration: none;
 }
-.wrap_blog_item .wrap_blog_text h2, .wrap_blog_item .wrap_blog_text .h2 {
+.wrap_blog_item .wrap_blog_text .title, .wrap_blog_item .wrap_blog_text .h2 {
   font-weight: 600;
   font-size: 18px;
   line-height: 140%;
   color: #000000;
   padding-top: 10px;
 }
-.wrap_blog_item .wrap_blog_text h2 a, .wrap_blog_item .wrap_blog_text .h2 a {
+.wrap_blog_item .wrap_blog_text .title a, .wrap_blog_item .wrap_blog_text .h2 a {
   color: #186BB7;
 }
 .wrap_blog_item .wrap_blog_text .cat-blog {
@@ -11882,7 +11883,7 @@ ul.slick-dots li.slick-active button {
   /* Цвет / белый */
   color: #FFFFFF;
 }
-.footer-section .wrap_footer_contact h5, .footer-section .wrap_footer_contact .h5 {
+.footer-section .wrap_footer_contact .title, .footer-section .wrap_footer_contact .h5 {
   padding-bottom: 50px;
   font-weight: 300;
   font-size: 18px;
@@ -14293,7 +14294,7 @@ button[aria-label="Google Pay"]{
   max-width: 600px;
   margin: 0 auto;
 }
-.section-ptext14 p span{
+.section-ptext14 h1{
   display: block;
   font-size: 20px;
   margin-bottom: 30px;
@@ -14339,8 +14340,10 @@ button[aria-label="Google Pay"]{
   margin: 0 auto;
 }
 
-
-
+.page-404{
+  padding: 100px 0 0;
+  text-align: center;
+}
 
 
 

@@ -53,7 +53,7 @@ if(!$posts){
                                 <div class="wrap_blog_text">
                                     <?php $rand_cat =  get_random_post_category_link()?>
                                     <a href="<?php echo $rand_cat?? $rand_cat['url']? $rand_cat['url'] : '' ?>" class="cat-blog"><?php echo $rand_cat?? $rand_cat['name']? $rand_cat['name'] : '' ?></a>
-                                    <h2><a href="<?php the_permalink();?>"><?php the_title()?></a></h2>
+                                    <div class="title"><a href="<?php the_permalink();?>"><?php the_title()?></a></div>
                                     <span><?php the_date()?></span>
                                 </div>
                             </div>
