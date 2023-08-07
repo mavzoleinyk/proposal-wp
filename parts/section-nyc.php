@@ -39,9 +39,6 @@ if($num == 1){
                     <div class="nycproposal">
                         <a href="<?php echo $item['link']['url']?? '' ?>">
                             <?php echo wp_get_attachment_image( $item['image']['id']?? '', $size )?>
-                            <div class="nycp_text">
-                                <p class="title"><?php echo $item['image']['caption']?? '' ?></p>
-                            </div>
                         </a>
                     </div>
                     <?php endforeach; ?>
