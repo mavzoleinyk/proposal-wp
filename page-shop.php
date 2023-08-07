@@ -3,7 +3,7 @@
 /**
  * The template for displaying all single posts
  * Theme Proposal
- * Template Name: Proposal Packages
+ * Template Name: Proposal Packages shop
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 

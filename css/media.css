@@ -851,6 +851,10 @@
     max-width: 100%;
     margin: 0 0 20px;
   }
+  .wrap_video_item .video_text{
+    height: 24%;
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .adds-widget {
