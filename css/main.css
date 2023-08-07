@@ -11395,7 +11395,7 @@ span.testmonail_arrow.prevta {
   text-align: center;
   padding-bottom: 25px;
 }
-.wrap_heaer_section h2, .wrap_heaer_section .h2 {
+.wrap_heaer_section h2, .wrap_heaer_section h1, .wrap_heaer_section .h2 {
   font-weight: 600;
   font-size: 40px;
   line-height: 48px;

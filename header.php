@@ -18,7 +18,7 @@
             "@context": "http://schema.org/",
             "@type": "Organization",
             "name": "Proposal007",
-            "logo": "https://prop.ipapus.com/wp-content/uploads/2022/09/home-hero-1.jpg",
+            "logo": "https://proposal007.com/wp-content/uploads/2023/08/logo-e1691411886178.png",
             "url": "https://proposal007.com/",
             "address": {
                 "@type": "PostalAddress",
@@ -33,7 +33,7 @@
         "@context": "http://schema.org/",
         "@type": "LocalBusiness",
         "name": "Proposal007",
-        "image": "https://prop.ipapus.com/wp-content/uploads/2022/09/home-hero-1.jpg",
+        "image": "https://proposal007.com/wp-content/uploads/2023/08/logo-e1691411886178.png",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "352 W 18th St",
@@ -47,7 +47,7 @@
             "name": "Tatiana Caicedo",
             "gender": "Female",
             "jobTitle": "CEO, CO-FOUNDER",
-            "image": "https://proposal007.com/wp-content/themes/proposal/images/team_1.jpg",
+            "image": "https://proposal007.com/wp-content/uploads/2023/08/logo-e1691411886178.png",
             "sameAs": [
             "https://www.linkedin.com/in/tatiana-caicedo-138736126",
             "https://www.instagram.com/tatiana_caiced/",
